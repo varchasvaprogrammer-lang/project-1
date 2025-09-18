@@ -1,0 +1,196 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+img {
+    background-color: transparent; /* Changed background color to transparent */
+    height: 150px;
+    width: 150px;
+    margin-right: 20px; /* Add right margin to the image */
+}
+body {
+    background-image: url(workout-5570353_1280.jpg); /* Added background image to body */
+    background-size: cover; /* Ensure the background image covers the entire body */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the body takes the full viewport height */
+    margin: 0; /* Remove default margin */
+    flex-direction: column; /* Arrange children in a column */
+    animation: fadeInZoom 2s ease-in-out; /* Apply fade-in and zoom animation */
+}
+.navBar {
+    background-color: #1C1C1C; /* Changed background color to a darker shade */
+    width: 100%; /* Make the navbar full width */
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute space evenly */
+    padding: 0 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideInRotate 1s ease-out; /* Updated animation */
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    z-index: 1000; /* Ensure it is above other elements */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRotate {
+    from {
+        transform: translateY(-100%) rotate(-10deg);
+        opacity: 0;
+        animation-duration: 3s;
+    }
+    to {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInZoom {
+    from {
+        transform: translateY(-100%) scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes buttonAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInZoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.02);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.navBar .logo {
+    font-size: 2em; /* Increase font size */
+    margin-left: 20px; /* Reduce left margin to bring it closer to the icon */
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    color: #FFD700; /* Changed text color to Gold */
+}
+
+.navBar .logo img {
+    height: 100%;
+    width: auto;
+}
+
+.navLinks {
+    margin-left: 10px; /* Bring links closer to the logo */
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.navLinks a {
+    color: #FFD700; /* Gold color */
+    text-decoration: none;
+    font-size: 1.2em; /* Increase font size */
+    transition: color 0.3s ease;
+}
+
+.navLinks a:hover {
+    color: #FFC107; /* Darker gold on hover */
+}
+
+.support {
+    margin-right: 50px;
+}
+
+/* Define the bounceIn animation */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        
+    }
+}
+
+.stylishButton {
+    background: linear-gradient(45deg, #000000, #555555); /* Gradient background from black to a shade of gray */
+    color: #FFFFFF; /* White text color */
+    padding: 20px 40px; /* Increase padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.5em; /* Increase font size */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    position: relative; /* Position relative for right adjustment */
+    left: calc(40% + 400px); /* Move the button 200px more to the right */
+    width: 250px; /* Set optimal width */
+    height: 70px; /* Set optimal height */
+    display: flex; /* Center text inside the button */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    animation: buttonAnimation 2s infinite; /* Add animation */
+}
+
+.stylishButton:hover {
+    background: linear-gradient(45deg, #333333, #777777); /* Darker gradient on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}

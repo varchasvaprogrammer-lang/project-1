@@ -1,0 +1,123 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #267b7a;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.suggest {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.suggest h1 {
+    text-align: center;
+    color: #ffffff; /* Changed text color to white for better contrast */
+    margin-bottom: 20px;
+    font-size: 36px; /* Increased font size */
+    animation: slideIn 1s ease-in-out;
+}
+
+.suggest p {
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 20px;
+    font-size: 20px; /* Increased font size */
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.suggest ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.suggest ul li {
+    background-color: #ecf0f1;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    color: #2c3e50;
+    font-size: 20px; /* Increased font size */
+    animation: bounceIn 2s ease-in-out;
+    transition: background-color 0.3s;
+}
+
+.suggest ul li:hover {
+    background-color: #bdc3c7;
+    color: #e74c3c;
+    animation: pulse 1s infinite;
+}
+
+.start-button {
+    display: block;
+    width: 150px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ff6b6b, #f0e130);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.start-button:hover {
+    background: linear-gradient(45deg, #f0e130, #ff6b6b);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
